@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Lilita+One&display=swap');
+
+body {
+    font-family: "Lilita One", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    margin: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* titulo */
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* botoes */
+
+button {
+    -webkit-text-stroke: 1.75px #333;
+    padding: 5px 20px;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #2f74fe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px #0040bf;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #3e7cf9;
+}
+
+button:active {
+    box-shadow: 0 2px #0055ff;
+    transform: translateY(2px);
+}
