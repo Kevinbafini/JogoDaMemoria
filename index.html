@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo da Memória</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   </head>
   <body>
+    <div id="tela-inicial">
+      <h1>Bem-vindo ao Jogo da Memória</h1>
+      <button id="btn-iniciar">Iniciar Jogo</button>
+    </div>
+
+    <div id="tela-jogo" class="escondido">
+      <h1>Jogo da Memória</h1>
+      <div class="jogo-da-memoria" id="jogo-da-memoria"></div>
+      <button id="btn-reiniciar" class="escondido">Reiniciar Jogo</button>
+    </div>
+
+    <audio id="som-acerto" src="sons/acerto.mp3"></audio>
     <script src="script.js"></script>
   </body>
 </html>
