@@ -11,6 +11,13 @@ body {
     overflow: hidden;
 }
 
+/* imagem */
+
+.imgTela-inicial {
+    max-width: 100%;
+    min-width: 10%;
+}
+
 /* Botão de inicio */
 
 button {
@@ -84,11 +91,6 @@ button:active {
     pointer-events: none;
 }
 
-.imgTela-inicial {
-    max-width: 100%;
-    min-width: 15%;
-}
-
 /* Cartas do Jogo */
 
 .jogo-da-memoria {
@@ -157,7 +159,7 @@ button:active {
 
 @media (max-width: 767px) {
     .imgTela-inicial {
-        width: 35%;
+        width: 30%;
 
     }
 
