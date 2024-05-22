@@ -6,17 +6,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f3f3f3;
+    background: linear-gradient(135deg, #98aff9, #7615ee);
     margin: 0;
-    transition: background-color 0.3s ease-in-out;
-}
-
-/* titulo */
-
-h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
+    overflow: hidden;
 }
 
 /* Botão de inicio */
@@ -58,4 +50,105 @@ button:active {
 
 #btn-reiniciar:active {
     box-shadow: 0 2px #388e3c;
+}
+
+/* Botão Telas */
+
+#tela-inicial,
+#tela-jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#tela-jogo {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#tela-jogo.ativo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#tela-inicial.esconder {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.imgTela-inicial {
+    max-width: 100%;
+    min-width: 15%;
+}
+
+/* Cartas do Jogo */
+
+.jogo-da-memoria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 90vw;
+    max-width: 600px;
+    height: 90vw;
+    max-height: 600px;
+    position: relative;
+}
+
+.carta-memoria {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s, box-shadow 0.5s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.carta-memoria.virada {
+    transform: rotateY(180deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.frente,
+.verso {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.frente {
+    transform: rotateY(180deg);
+    background-color: #f3f3f3;
+}
+
+.verso {
+    background: linear-gradient(135deg, #ef2424, #ff007b);
+}
+
+.escondido {
+    display: none;
 }
