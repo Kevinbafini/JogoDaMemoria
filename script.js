@@ -15,7 +15,7 @@ const telaJogo = document.getElementById('tela-jogo');
 const btnIniciar = document.getElementById('btn-iniciar');
 const btnReiniciar = document.getElementById('btn-reiniciar');
 const somAcerto = document.getElementById('som-acerto');
-const somErro = document.getElementById('som-erro');
+const feedback = document.getElementById('feedback');
 
 let cartaVirada = false;
 let travarTabuleiro = false;
@@ -86,6 +86,13 @@ function desativarCartas() {
 
     if (paresEncontrados === cartas.length) {
         soltarConfetes();
+            feedback.textContent = 'Parabéns! Você concluiu o jogo!';
+            feedback.style.color = '#00CC00';
+            feedback.style.fontSize = '2em';
+            feedback.style.marginTop = '20px';
+        setTimeout(() => {
+            document.getElementById('feedback').textContent = '';
+        }, 3000); 
         setTimeout(() => {
             btnReiniciar.classList.remove('escondido');
         }, 3000);
