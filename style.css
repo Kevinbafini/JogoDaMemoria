@@ -19,7 +19,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* botoes */
+/* Botão de inicio */
 
 button {
     font-family: "Lilita One", sans-serif;
@@ -43,4 +43,19 @@ button:hover {
 button:active {
     box-shadow: 0 2px #d87d02;
     transform: translateY(2px);
+}
+
+/* Botão de reiniciar */
+
+#btn-reiniciar {
+    background-color: #4caf50;
+    box-shadow: 0 4px #388e3c;
+}
+
+#btn-reiniciar:hover {
+    background-color: #43a047;
+}
+
+#btn-reiniciar:active {
+    box-shadow: 0 2px #388e3c;
 }
